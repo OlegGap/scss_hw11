@@ -1,0 +1,36 @@
+.title-wrapper {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    .pre-title {
+        font-family: KaushanScript-Regular;
+        font-size: 24pt;
+    }
+    .title {
+        position: relative;
+        text-transform: uppercase;
+        margin-top: 20px;
+        font-family: Montserrat-Bold;
+        font-size: 30pt;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: red;
+    }
+}
+.title__under-text-wrapper{
+    text-align: center;
+    .title__under-text {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 60px;
+        font-family: Roboto-Regular;
+        color: #999;
+        font-size: 15pt;         
+    }
+}

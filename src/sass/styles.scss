@@ -2,3 +2,11 @@
    Import partials below
 */
 @import './normalize';
+@import './helpers/varibles.scss';
+
+@import './blocks/header.scss';
+@import './blocks/services';
+@import './blocks/fonts';
+@import './blocks/team-title';
+@import './blocks/team';
+@import './blocks/footer';
