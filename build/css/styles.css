@@ -724,18 +724,6 @@ template {
   transition: box-shadow 0.2s linear, transform 0.2s linear, -webkit-transform 0.2s linear;
 }
 
-.team__img--1 {
-  background-image: url(../images/team/Team-photo1@2x.jpg);
-}
-
-.team__img--2 {
-  background-image: url(../images/team/Team-photo2@2x.jpg);
-}
-
-.team__img--3 {
-  background-image: url(../images/team/Team-photo3@2x.jpg);
-}
-
 .team__img::before {
   content: "";
   position: absolute;
@@ -748,14 +736,30 @@ template {
   transition: opacity 0.2s linear;
 }
 
-.team__img:hover::before {
-  opacity: 0.9;
-}
-
 .team__img:hover {
   box-shadow: 10px 10px #95e1d3;
   -webkit-transform: translate(-10px, -10px);
   transform: translate(-10px, -10px);
+}
+
+.team__img:hover .team__button-wrapper {
+  opacity: 1;
+}
+
+.team__img:hover::before {
+  opacity: 0.9;
+}
+
+.team__img--1 {
+  background-image: url(../images/team/Team-photo1@2x.jpg);
+}
+
+.team__img--2 {
+  background-image: url(../images/team/Team-photo2@2x.jpg);
+}
+
+.team__img--3 {
+  background-image: url(../images/team/Team-photo3@2x.jpg);
 }
 
 .team__button-wrapper {
@@ -767,10 +771,6 @@ template {
   position: absolute;
   opacity: 0;
   transition: opacity 0.2s linear;
-}
-
-.team__img:hover .team__button-wrapper {
-  opacity: 1;
 }
 
 .team__button {
@@ -870,7 +870,7 @@ template {
   font-family: Montserrat-Regular;
 }
 
-.footer__info > span {
+.footer__info span {
   color: #f38181;
 }
 
