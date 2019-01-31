@@ -3,53 +3,113 @@
     margin-top: 90px;
     justify-content: center;
     flex-wrap: wrap;
-  }
-  .team-wrapper {
-    margin-right: 30px;
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  .team__img {
-    width: 380px;
-    height: 470px;
-    display: block;
-    position: relative;
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: 0px 0px $color--blue;
-    transition: box-shadow 0.2s linear, transform 0.2s linear;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient($color--pink, $color--yelow);
-      opacity: 0;
-      transition: opacity 0.2s linear;
-    }
-    &:hover {
-      box-shadow: 10px 10px #95e1d3;
-      transform: translate(-10px, -10px);
-      .team__button-wrapper {
-        opacity: 1;
+      &-wrapper {
+        margin-right: 30px;
+        &:last-child {
+          margin-right: 0;
+        }
       }
-      &::before {
-        opacity: 0.9;
+      &__img {
+        width: 380px;
+        height: 470px;
+        display: block;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        box-shadow: 0px 0px $color--blue;
+        transition: box-shadow 0.2s linear, transform 0.2s linear;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: linear-gradient($color--pink, $color--yelow);
+          opacity: 0;
+          transition: opacity 0.2s linear;
+        }
+        &:hover {
+          box-shadow: 10px 10px #95e1d3;
+          transform: translate(-10px, -10px);
+          .team__button-wrapper {
+            opacity: 1;
+          }
+          &::before {
+            opacity: 0.9;
+          }
+        }
+        &--1 {
+          background-image: url(../images/team/Team-photo1@2x.jpg);
+        }
+        &--2 {
+          background-image: url(../images/team/Team-photo2@2x.jpg);
+        }
+        &--3 {
+          background-image: url(../images/team/Team-photo3@2x.jpg);
+        }
+      } 
+      &__button-wrapper {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.2s linear;
+      } 
+      &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55px;
+        height: 55px;
+        background-color: $color--yelow;
+        transition: background-color 0.2s linear;
+        &:hover {
+          background-color: $color--blue;
+          .team__icon{
+            fill:$color--pink;
+          }
+        }
       }
-    }
-  } 
-  .team__img--1 {
-    background-image: url(../images/team/Team-photo1@2x.jpg);
-  }
-  .team__img--2 {
-    background-image: url(../images/team/Team-photo2@2x.jpg);
-  }
-  .team__img--3 {
-    background-image: url(../images/team/Team-photo3@2x.jpg);
-  }
+      &__link {
+        margin-right: 1px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      &__link {
+        margin-right: 1px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+      &__name-wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+      }
+      &__name {
+        text-transform: uppercase;
+        margin-bottom: 17px;
+        font-size: 14pt;
+        font-family: Montserrat-Bold;
+      }
+      &__icon{
+        width: 32px;
+        height: 32px;
+        fill:#fff;
+        transition: fill 0.2s linear;
+      }
+      &__name-info {
+        font-size: 15pt;
+        font-family: Roboto-LightItalic;
+        color: #999999;
+      }
+}
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .team__img--1 {
       background-image: url(../images/team/Team-photo1.jpg);
@@ -60,58 +120,4 @@
     .team__img--3 {
       background-image: url(../images/team/Team-photo3.jpg);
     }
-  }
-  .team__button-wrapper {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.2s linear;
-  }
-  .team__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 55px;
-    height: 55px;
-    background-color: $color--yelow;
-    transition: background-color 0.2s linear;
-    &:hover {
-      background-color: $color--blue;
-    }
-  }
-  .team__link {
-    margin-right: 1px;
-    &:last-child {
-      margin: 0;
-    }
-  }
-  .team__name-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 30px;
-  }
-  .team__name {
-    text-transform: uppercase;
-    margin-bottom: 17px;
-    font-size: 14pt;
-    font-family: Montserrat-Bold;
-  }
-  .team__icon{
-    width: 32px;
-    height: 32px;
-    fill:#fff;
-    transition: fill 0.2s linear;
-  }
-  .team__button:hover .team__icon{
-    fill:$color--pink;
-  }
-  .team__name-info {
-    font-size: 15pt;
-    font-family: Roboto-LightItalic;
-    color: #999999;
   }

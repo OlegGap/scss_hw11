@@ -787,6 +787,18 @@ template {
   background-color: #95e1d3;
 }
 
+.team__button:hover .team__icon {
+  fill: #f38181;
+}
+
+.team__link {
+  margin-right: 1px;
+}
+
+.team__link:last-child {
+  margin: 0;
+}
+
 .team__link {
   margin-right: 1px;
 }
@@ -814,10 +826,6 @@ template {
   height: 32px;
   fill: #fff;
   transition: fill 0.2s linear;
-}
-
-.team__button:hover .team__icon {
-  fill: #f38181;
 }
 
 .team__name-info {
